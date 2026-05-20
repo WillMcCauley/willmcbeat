@@ -1,9 +1,9 @@
 const PAYMENT_LINKS = {
   paypal: {
     // Add public PayPal checkout/payment links here. Never add secret keys to this static site.
-    custom: "",
-    lease: "",
-    exclusive: ""
+    custom: "https://www.paypal.com/ncp/payment/JU8R489JH2MDG",
+    lease: "https://www.paypal.com/ncp/payment/7NS4W3SBCCJ34",
+    exclusive: "https://www.paypal.com/ncp/payment/7TRKQAGHNQ2T6"
   },
   fiverr: ""
 };
@@ -76,7 +76,7 @@ document.querySelectorAll(".buy-button").forEach((button) => {
   button.addEventListener("click", () => {
     selectedPackage = button.dataset.package;
     selectedPrice = button.dataset.price;
-    orderSummary.textContent = `${selectedPackage} - ${selectedPrice}. Add your artist name and beat details, then message WillMcBeat or use a connected payment link.`;
+    orderSummary.textContent = `${selectedPackage} - ${selectedPrice}. Add your artist name and beat details, then message Will McBeat or use a connected payment link.`;
     artistName.value = "";
     beatInfo.value = "";
     setOrderLinks();

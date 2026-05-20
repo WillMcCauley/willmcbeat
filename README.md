@@ -1,6 +1,6 @@
-# WillMcBeat Producer Website
+# Will McBeat Producer Website
 
-Static GitHub Pages site for WillMcBeat.
+Static GitHub Pages site for Will McBeat.
 
 ## Files
 
@@ -9,6 +9,9 @@ Static GitHub Pages site for WillMcBeat.
 - `script.js` - purchase button behavior and payment link config
 - `ProdIcon.png` - producer logo
 - `arctic-willmcbeat.png` - arctic hero image
+- `CustomPackage.png` - custom beat lease package image
+- `LeasePackage.png` - YouTube beat lease package image
+- `OwnershipPackage.png` - exclusive ownership package image
 
 ## Payment recommendation
 
@@ -25,9 +28,9 @@ To connect payments, open `script.js` and replace the empty strings with public 
 ```js
 const PAYMENT_LINKS = {
   paypal: {
-    custom: "https://paypal.me/YOURNAME/10",
-    lease: "https://paypal.me/YOURNAME/5",
-    exclusive: "https://paypal.me/YOURNAME/25"
+    custom: "https://www.paypal.com/ncp/payment/JU8R489JH2MDG",
+    lease: "https://www.paypal.com/ncp/payment/7NS4W3SBCCJ34",
+    exclusive: "https://www.paypal.com/ncp/payment/7TRKQAGHNQ2T6"
   },
   fiverr: "https://www.fiverr.com/YOURUSERNAME/YOUR-GIG"
 };
