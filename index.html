@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WillMcBeat producer website for custom beats, leases, exclusive ownership, R&B, trap, and hip hop instrumentals.">
+    <title>WillMcBeat | Producer, Beats, Leases</title>
+    <link rel="preload" href="assets/ProdIcon.png" as="image">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="WillMcBeat home">
+        <img src="assets/ProdIcon.png" alt="WillMcBeat producer logo">
+        <span>WillMcBeat</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#beats">Beats</a>
+        <a href="#packages">Buy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img src="assets/ProdIcon.png" alt="">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">R&B, trap soul, hip hop</p>
+          <h1 id="hero-title">Clean beats with feeling, bounce, and room for your voice.</h1>
+          <p>
+            I make smooth R&B, melodic trap, and hard-hitting hip hop beats for artists who need a real vibe,
+            not just a loop. Browse my YouTube, choose a lease, request a custom beat, or lock in full ownership.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#packages">Buy a beat</a>
+            <a class="button secondary" href="https://www.youtube.com/@WillMcBeat" target="_blank" rel="noopener">Watch on YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro" id="beats" aria-labelledby="beats-title">
+        <div>
+          <p class="eyebrow">Who I am</p>
+          <h2 id="beats-title">Producer for artists who want smooth melodies and modern drums.</h2>
+        </div>
+        <p>
+          WillMcBeat blends classic R&B texture, soulful chords, guitar melodies, vocal layers, heavy 808s,
+          trap hi-hats, and clean arrangement space so rappers and singers can write fast and sound polished.
+        </p>
+      </section>
+
+      <section class="video-band" aria-labelledby="youtube-title">
+        <div>
+          <p class="eyebrow">Latest uploads</p>
+          <h2 id="youtube-title">Hear the beats on YouTube.</h2>
+          <p>Pick any uploaded beat, send the title, and choose the license that fits your song.</p>
+        </div>
+        <a class="button light" href="https://www.youtube.com/@WillMcBeat" target="_blank" rel="noopener">Open YouTube Channel</a>
+      </section>
+
+      <section class="section" id="packages" aria-labelledby="packages-title">
+        <div class="section-heading">
+          <p class="eyebrow">Purchase options</p>
+          <h2 id="packages-title">Choose your beat package.</h2>
+          <p>Simple prices, clear rights, and an easy way to start the order.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <div class="card-topline">
+              <h3>Custom Beat Lease</h3>
+              <strong>$10</strong>
+            </div>
+            <p>Request the style, mood, artists, instruments, and tempo you want. I build a custom leased beat around your idea.</p>
+            <ul>
+              <li>Made from your request</li>
+              <li>Leased rights</li>
+              <li>Best for new songs and demos</li>
+            </ul>
+            <button class="button primary buy-button" data-package="Custom Beat Lease" data-price="$10">Start custom order</button>
+          </article>
+
+          <article class="price-card featured">
+            <div class="card-topline">
+              <h3>YouTube Beat Lease</h3>
+              <strong>$5</strong>
+            </div>
+            <p>Lease any beat already uploaded on my YouTube channel. Send me the beat title or link when you order.</p>
+            <ul>
+              <li>Pick from uploaded beats</li>
+              <li>Fastest option</li>
+              <li>Great for singles and freestyles</li>
+            </ul>
+            <button class="button primary buy-button" data-package="YouTube Beat Lease" data-price="$5">Lease a YouTube beat</button>
+          </article>
+
+          <article class="price-card">
+            <div class="card-topline">
+              <h3>Exclusive Ownership</h3>
+              <strong>$25</strong>
+            </div>
+            <p>Fully own one of my beats so you can release with exclusive rights and keep the sound yours.</p>
+            <ul>
+              <li>Exclusive rights</li>
+              <li>Beat removed from sale</li>
+              <li>Best for serious releases</li>
+            </ul>
+            <button class="button primary buy-button" data-package="Exclusive Ownership" data-price="$25">Buy exclusive</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section payments" aria-labelledby="payments-title">
+        <div>
+          <p class="eyebrow">Payment setup</p>
+          <h2 id="payments-title">Best payment path for this site.</h2>
+        </div>
+        <div class="payment-columns">
+          <p>
+            For GitHub Pages, the cleanest setup is PayPal payment links or Fiverr package links. A bank wire is possible,
+            but it is slower, more manual, and asks buyers for more trust than most beat customers want.
+          </p>
+          <p>
+            Add your PayPal.me or PayPal checkout links in <strong>script.js</strong>. If you prefer Fiverr, add your Fiverr gig link
+            and the purchase buttons can send customers there instead.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div>
+        <img src="assets/ProdIcon.png" alt="">
+        <p>WillMcBeat</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@WillMcBeat" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/willmcbeat/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </footer>
+
+    <dialog class="order-dialog" id="orderDialog" aria-labelledby="orderTitle">
+      <form method="dialog">
+        <button class="close-button" value="cancel" aria-label="Close">x</button>
+        <p class="eyebrow">Order request</p>
+        <h2 id="orderTitle">Start your order</h2>
+        <p id="orderSummary"></p>
+        <label for="artistName">Artist name</label>
+        <input id="artistName" name="artistName" autocomplete="name" placeholder="Your artist name">
+        <label for="beatInfo">Beat title, link, or custom request</label>
+        <textarea id="beatInfo" name="beatInfo" rows="4" placeholder="Paste the YouTube beat link or describe your custom beat."></textarea>
+        <div class="request-preview" aria-live="polite">
+          <p id="requestMessage"></p>
+          <button class="button secondary" id="copyRequest" type="button">Copy request message</button>
+        </div>
+        <div class="dialog-actions">
+          <a class="button primary" id="instagramOrder" href="https://www.instagram.com/willmcbeat/" target="_blank" rel="noopener">Message on Instagram</a>
+          <a class="button secondary is-disabled" id="paypalOrder" href="#" target="_blank" rel="noopener">PayPal not connected</a>
+          <a class="button secondary is-disabled" id="fiverrOrder" href="#" target="_blank" rel="noopener">Fiverr not connected</a>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
