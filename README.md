@@ -7,19 +7,20 @@ Static GitHub Pages site for WillMcBeat.
 - `index.html` - page content
 - `styles.css` - layout and visual design
 - `script.js` - purchase button behavior and payment link config
-- `assets/ProdIcon.png` - producer logo
+- `ProdIcon.png` - producer logo
+- `arctic-willmcbeat.png` - arctic hero image
 
 ## Payment recommendation
 
-For GitHub Pages, use payment links instead of a custom checkout backend.
+For GitHub Pages, use PayPal payment links or PayPal hosted buttons instead of private checkout credentials.
 
 Best options:
 
-1. PayPal payment links or PayPal.me links for each package.
+1. PayPal payment links, PayPal.me links, or hosted PayPal buttons for each package.
 2. Fiverr gig/package link if you want Fiverr to handle payment, delivery, and buyer messaging.
 3. Bank wire only for special direct clients, because it is slower and less customer-friendly for beat sales.
 
-To connect payments, open `script.js` and replace the empty strings:
+To connect payments, open `script.js` and replace the empty strings with public PayPal links:
 
 ```js
 const PAYMENT_LINKS = {
@@ -31,6 +32,10 @@ const PAYMENT_LINKS = {
   fiverr: "https://www.fiverr.com/YOURUSERNAME/YOUR-GIG"
 };
 ```
+
+Do not put PayPal secret keys, passwords, bank logins, or API secrets in this site. GitHub Pages is public.
+
+If using PayPal developer checkout buttons instead of links, the only safe value to put in the browser is your public PayPal Client ID. A server would be required to safely use a PayPal Secret.
 
 ## GitHub Pages setup
 

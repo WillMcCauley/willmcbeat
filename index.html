@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="WillMcBeat producer website for custom beats, leases, exclusive ownership, R&B, trap, and hip hop instrumentals.">
     <title>WillMcBeat | Producer, Beats, Leases</title>
-    <link rel="preload" href="assets/ProdIcon.png" as="image">
+    <link rel="preload" href="ProdIcon.png" as="image">
+    <link rel="preload" href="arctic-willmcbeat.png" as="image">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="snowfall" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="WillMcBeat home">
-        <img src="assets/ProdIcon.png" alt="WillMcBeat producer logo">
+        <img src="ProdIcon.png" alt="WillMcBeat producer logo">
         <span>WillMcBeat</span>
       </a>
       <nav aria-label="Main navigation">
@@ -23,12 +31,9 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media">
-          <img src="assets/ProdIcon.png" alt="">
-        </div>
         <div class="hero-copy">
-          <p class="eyebrow">R&B, trap soul, hip hop</p>
-          <h1 id="hero-title">Clean beats with feeling, bounce, and room for your voice.</h1>
+          <p class="eyebrow">Arctic trap soul and R&B</p>
+          <h1 id="hero-title">Cold melodies. Heavy drums. Beats built for real songs.</h1>
           <p>
             I make smooth R&B, melodic trap, and hard-hitting hip hop beats for artists who need a real vibe,
             not just a loop. Browse my YouTube, choose a lease, request a custom beat, or lock in full ownership.
@@ -38,6 +43,9 @@
             <a class="button secondary" href="https://www.youtube.com/@WillMcBeat" target="_blank" rel="noopener">Watch on YouTube</a>
           </div>
         </div>
+        <figure class="hero-art">
+          <img src="arctic-willmcbeat.png" alt="Arctic themed WillMcBeat producer artwork">
+        </figure>
       </section>
 
       <section class="section intro" id="beats" aria-labelledby="beats-title">
@@ -119,12 +127,12 @@
         </div>
         <div class="payment-columns">
           <p>
-            For GitHub Pages, the cleanest setup is PayPal payment links or Fiverr package links. A bank wire is possible,
+            For GitHub Pages, the cleanest setup is PayPal payment links or PayPal checkout buttons. A bank wire is possible,
             but it is slower, more manual, and asks buyers for more trust than most beat customers want.
           </p>
           <p>
-            Add your PayPal.me or PayPal checkout links in <strong>script.js</strong>. If you prefer Fiverr, add your Fiverr gig link
-            and the purchase buttons can send customers there instead.
+            You can safely add public PayPal links in <strong>script.js</strong>. Do not put PayPal secret keys,
+            passwords, bank logins, or private API credentials on a GitHub Pages site.
           </p>
         </div>
       </section>
@@ -132,10 +140,11 @@
 
     <footer class="site-footer" id="contact">
       <div>
-        <img src="assets/ProdIcon.png" alt="">
+        <img src="ProdIcon.png" alt="WillMcBeat producer logo">
         <p>WillMcBeat</p>
       </div>
       <div class="social-links">
+        <a href="mailto:willmcbeat@gmail.com">Email</a>
         <a href="https://www.youtube.com/@WillMcBeat" target="_blank" rel="noopener">YouTube</a>
         <a href="https://www.instagram.com/willmcbeat/" target="_blank" rel="noopener">Instagram</a>
       </div>

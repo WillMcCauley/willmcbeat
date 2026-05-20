@@ -1,5 +1,6 @@
 const PAYMENT_LINKS = {
   paypal: {
+    // Add public PayPal checkout/payment links here. Never add secret keys to this static site.
     custom: "",
     lease: "",
     exclusive: ""
@@ -8,6 +9,7 @@ const PAYMENT_LINKS = {
 };
 
 const instagramBase = "https://www.instagram.com/willmcbeat/";
+const contactEmail = "willmcbeat@gmail.com";
 const orderDialog = document.querySelector("#orderDialog");
 const orderSummary = document.querySelector("#orderSummary");
 const instagramOrder = document.querySelector("#instagramOrder");
@@ -53,11 +55,14 @@ function setOrderLinks() {
   requestMessage.textContent = buildMessage();
 
   instagramOrder.href = instagramBase;
+  instagramOrder.textContent = "Message on Instagram";
 
   if (paypalLink) {
     setActiveLink(paypalOrder, paypalLink, "Pay with PayPal");
   } else {
-    setDisabledLink(paypalOrder, "PayPal not connected");
+    const emailSubject = encodeURIComponent(`${selectedPackage} order`);
+    const emailBody = encodeURIComponent(buildMessage());
+    setActiveLink(paypalOrder, `mailto:${contactEmail}?subject=${emailSubject}&body=${emailBody}`, "Email to order");
   }
 
   if (PAYMENT_LINKS.fiverr) {
