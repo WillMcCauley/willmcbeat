@@ -1,27 +1,21 @@
 const PAYMENT_LINKS = {
   paypal: {
-    // Add public PayPal checkout/payment links here. Never add secret keys to this static site.
-    custom: "https://www.paypal.com/ncp/payment/JU8R489JH2MDG",
     lease: "https://www.paypal.com/ncp/payment/7NS4W3SBCCJ34",
     exclusive: "https://www.paypal.com/ncp/payment/7TRKQAGHNQ2T6"
-  },
-  fiverr: ""
+  }
 };
 
-const instagramBase = "https://www.instagram.com/willmcbeat/";
 const contactEmail = "willmcbeat@gmail.com";
 const orderDialog = document.querySelector("#orderDialog");
 const orderSummary = document.querySelector("#orderSummary");
-const instagramOrder = document.querySelector("#instagramOrder");
+const emailOrder = document.querySelector("#emailOrder");
 const paypalOrder = document.querySelector("#paypalOrder");
-const fiverrOrder = document.querySelector("#fiverrOrder");
 const requestMessage = document.querySelector("#requestMessage");
 const copyRequest = document.querySelector("#copyRequest");
 const artistName = document.querySelector("#artistName");
 const beatInfo = document.querySelector("#beatInfo");
 
 const packageKeys = {
-  "Custom Beat Lease": "custom",
   "YouTube Beat Lease": "lease",
   "Exclusive Ownership": "exclusive"
 };
@@ -52,23 +46,15 @@ function setActiveLink(link, href, label) {
 function setOrderLinks() {
   const paymentKey = packageKeys[selectedPackage];
   const paypalLink = PAYMENT_LINKS.paypal[paymentKey];
+  const emailSubject = encodeURIComponent(`${selectedPackage} beat details`);
+  const emailBody = encodeURIComponent(buildMessage());
   requestMessage.textContent = buildMessage();
-
-  instagramOrder.href = instagramBase;
-  instagramOrder.textContent = "Message on Instagram";
+  emailOrder.href = `mailto:${contactEmail}?subject=${emailSubject}&body=${emailBody}`;
 
   if (paypalLink) {
     setActiveLink(paypalOrder, paypalLink, "Pay with PayPal");
   } else {
-    const emailSubject = encodeURIComponent(`${selectedPackage} order`);
-    const emailBody = encodeURIComponent(buildMessage());
-    setActiveLink(paypalOrder, `mailto:${contactEmail}?subject=${emailSubject}&body=${emailBody}`, "Email to order");
-  }
-
-  if (PAYMENT_LINKS.fiverr) {
-    setActiveLink(fiverrOrder, PAYMENT_LINKS.fiverr, "Order on Fiverr");
-  } else {
-    setDisabledLink(fiverrOrder, "Fiverr not connected");
+    setDisabledLink(paypalOrder, "PayPal not connected");
   }
 }
 
@@ -76,7 +62,7 @@ document.querySelectorAll(".buy-button").forEach((button) => {
   button.addEventListener("click", () => {
     selectedPackage = button.dataset.package;
     selectedPrice = button.dataset.price;
-    orderSummary.textContent = `${selectedPackage} - ${selectedPrice}. Add your artist name and beat details, then message Will McBeat or use a connected payment link.`;
+    orderSummary.textContent = `${selectedPackage} - ${selectedPrice}. Send the beat title or YouTube link by email, then complete checkout with PayPal.`;
     artistName.value = "";
     beatInfo.value = "";
     setOrderLinks();
@@ -96,10 +82,8 @@ copyRequest.addEventListener("click", async () => {
   }, 1600);
 });
 
-[paypalOrder, fiverrOrder].forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (link.getAttribute("aria-disabled") === "true") {
-      event.preventDefault();
-    }
-  });
+paypalOrder.addEventListener("click", (event) => {
+  if (paypalOrder.getAttribute("aria-disabled") === "true") {
+    event.preventDefault();
+  }
 });

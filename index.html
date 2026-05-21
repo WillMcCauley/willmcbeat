@@ -88,7 +88,7 @@
               <li>Leased rights</li>
               <li>Best for new songs and demos</li>
             </ul>
-            <button class="button primary buy-button" data-package="Custom Beat Lease" data-price="$10">Start custom order</button>
+            <a class="button primary" href="http://www.fiverr.com/s/WEaB4p5" target="_blank" rel="noopener">Start custom order</a>
           </article>
 
           <article class="price-card featured">
@@ -122,23 +122,6 @@
           </article>
         </div>
       </section>
-
-      <section class="section payments" aria-labelledby="payments-title">
-        <div>
-          <p class="eyebrow">Payment setup</p>
-          <h2 id="payments-title">Best payment path for this site.</h2>
-        </div>
-        <div class="payment-columns">
-          <p>
-            For GitHub Pages, the cleanest setup is PayPal payment links or PayPal checkout buttons. A bank wire is possible,
-            but it is slower, more manual, and asks buyers for more trust than most beat customers want.
-          </p>
-          <p>
-            You can safely add public PayPal links in <strong>script.js</strong>. Do not put PayPal secret keys,
-            passwords, bank logins, or private API credentials on a GitHub Pages site.
-          </p>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer" id="contact">
@@ -156,21 +139,20 @@
     <dialog class="order-dialog" id="orderDialog" aria-labelledby="orderTitle">
       <form method="dialog">
         <button class="close-button" value="cancel" aria-label="Close">x</button>
-        <p class="eyebrow">Order request</p>
-        <h2 id="orderTitle">Start your order</h2>
+        <p class="eyebrow">Beat details</p>
+        <h2 id="orderTitle">Send your beat choice</h2>
         <p id="orderSummary"></p>
         <label for="artistName">Artist name</label>
         <input id="artistName" name="artistName" autocomplete="name" placeholder="Your artist name">
-        <label for="beatInfo">Beat title, link, or custom request</label>
-        <textarea id="beatInfo" name="beatInfo" rows="4" placeholder="Paste the YouTube beat link or describe your custom beat."></textarea>
+        <label for="beatInfo">Beat title or YouTube link</label>
+        <textarea id="beatInfo" name="beatInfo" rows="4" placeholder="Paste the YouTube beat link or type the beat title."></textarea>
         <div class="request-preview" aria-live="polite">
           <p id="requestMessage"></p>
           <button class="button secondary" id="copyRequest" type="button">Copy request message</button>
         </div>
         <div class="dialog-actions">
-          <a class="button primary" id="instagramOrder" href="https://www.instagram.com/willmcbeat/" target="_blank" rel="noopener">Message on Instagram</a>
+          <a class="button primary" id="emailOrder" href="mailto:willmcbeat@gmail.com">Email beat details</a>
           <a class="button secondary is-disabled" id="paypalOrder" href="#" target="_blank" rel="noopener">PayPal not connected</a>
-          <a class="button secondary is-disabled" id="fiverrOrder" href="#" target="_blank" rel="noopener">Fiverr not connected</a>
         </div>
       </form>
     </dialog>

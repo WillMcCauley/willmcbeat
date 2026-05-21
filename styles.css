@@ -169,7 +169,7 @@ h3 {
 .intro > p,
 .video-band p,
 .price-card p,
-.payments p {
+.price-card p {
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.7;
@@ -316,18 +316,6 @@ h3 {
 .price-card .button {
   margin-top: auto;
   width: 100%;
-}
-
-.payments {
-  background: var(--panel);
-  border-top: 1px solid var(--line);
-}
-
-.payment-columns {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 24px;
 }
 
 .site-footer {
@@ -488,7 +476,6 @@ textarea {
 @media (max-width: 880px) {
   .hero,
   .intro,
-  .payment-columns,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
